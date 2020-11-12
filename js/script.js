@@ -1,10 +1,15 @@
+//HTML REFERENCES
+
+let rockBtn = document.querySelector('#rock-btn');
+let paperBtn = document.querySelector('#paper-btn');
+let scissorsBtn = document.querySelector('#scissors-btn');
+
 // FUNCTIONS
+
 function getMoveName(argMoveId) {
     if (argMoveId == 1) return 'kamień';
     else if (argMoveId == 2) return 'papier';
     else if (argMoveId == 3) return 'nożyce';
-    else printMessage('Nie znam ruchu o id ' + argMoveId + '.');
-    return 'nieznany ruch';
 }
 
 function displayResult(argComputerMove, argPlayerMove) {
@@ -18,22 +23,45 @@ function displayResult(argComputerMove, argPlayerMove) {
     else printMessage('Ty przegrywasz!');
 }
 
-// MOVES
+function playGame(playerInput){
 
-//compute moves
-let randomNumber = Math.floor(Math.random() * 3 + 1);
-console.log('Wylosowana liczba to: ' + randomNumber);
-let computerMove = getMoveName(randomNumber);
-printMessage('Mój ruch to: ' + computerMove);
+    // clear messages
+    clearMessages();
 
-// player moves
-let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
-console.log('Gracz wpisał: ' + playerInput);
-let playerMove = getMoveName(playerInput);
-printMessage('Twój ruch to: ' + playerMove);
+    //compute moves
+    let randomNumber = Math.floor(Math.random() * 3 + 1);
+    let computerMove = getMoveName(randomNumber);
+    
+    // player moves
+    let playerMove = getMoveName(playerInput);
+    
+    // render player and computer chocies in HTML
+    printMessage('Twój ruch to: ' + playerMove);
+    printMessage('Mój ruch to: ' + computerMove);
 
-//RESULT
-displayResult(computerMove, playerMove);
+    //result
+    displayResult(computerMove, playerMove);
+
+    
+}
+
+//MAIN PROCESS
+
+rockBtn.addEventListener('click', function() {
+    playGame(1);
+});
+
+paperBtn.addEventListener('click', function() {
+    playGame(2);
+});
+
+scissorsBtn.addEventListener('click', function() {
+    playGame(3);
+});
+
+
+
+
 
 
 
