@@ -4,16 +4,50 @@
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 </head>
-<body>
-	<div class="container">
-		<div id="buttons">
-			<button id="rock-btn">Kamień</button>
-			<button id="paper-btn">Papier</button>
-			<button id="scissors-btn">Nożyce</button>
+<body> 
+	<div class="header">
+		<div class="header-title">
+			<h1 class="title">KAMIEŃ-PAPIER-NOŻYCE</h1>
+			<p>zagraj ze mną</p>
 		</div>
-		<div id="messages"></div>
 	</div>
+	<div class="container">
+		<div class="rules">
+			<div class="rules-box">
+				<h3>ZASADY</h3>
+				<ol>
+					<li>Wybierz swój ruch</li>
+					<li>Poczekaj na mój ruch</li>
+					<li>Kto pokaże silniejszy symbol, otrzymuje jeden punkt</li>
+					<li>W przypadku pokazania dwóch takich samych symboli następuje remis – punktu brak.</li>
+				</ol>
+			</div>
+			<div class="rules-box">
+				<h3>HIERARCHIA RUCHÓW</h3>
+				<ul>
+					<li>nożyce są silniejsze od papieru, ponieważ go tną,</li>
+					<li>kamień jest silniejszy od nożyc, ponieważ je tępi,</li>
+					<li>papier jest silniejszy od kamienia, ponieważ go owija</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="game">
+		<div class="game-content">
+			<div class="game-title">
+				<h3>GRA</h3>
+			</div>
+			<div id="buttons">
+				<button id="rock-btn"><i class="fas fa-hand-rock"></i></button>
+				<button id="paper-btn"><i class="fas fa-hand-paper"></i></button>
+				<button id="scissors-btn"><i class="fas fa-hand-scissors"></i></button>
+			</div>
+			<div id="messages">
+			</div>
+		</div>
+	<div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
 </body>
