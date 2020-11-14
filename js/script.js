@@ -1,8 +1,9 @@
-//HTML REFERENCES
+{
+    //HTML REFERENCES
 
-let rockBtn = document.querySelector('#rock-btn');
-let paperBtn = document.querySelector('#paper-btn');
-let scissorsBtn = document.querySelector('#scissors-btn');
+const rockBtn = document.querySelector('#rock-btn');
+const paperBtn = document.querySelector('#paper-btn');
+const scissorsBtn = document.querySelector('#scissors-btn');
 
 // FUNCTIONS
 
@@ -58,7 +59,7 @@ paperBtn.addEventListener('click', function() {
 scissorsBtn.addEventListener('click', function() {
     playGame(3);
 });
-
+}
 
 
 
